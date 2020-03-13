@@ -17,6 +17,7 @@
 
 import logging
 import os
+import jsonlines
 
 from ...file_utils import is_tf_available
 from .utils import DataProcessor, InputExample, InputFeatures
