@@ -557,7 +557,7 @@ class BoolQProcessor(DataProcessor):
     def _read_jsonl(self, input_file, quotechar=None):
         """Reads a jsonl file."""
         all_lines = [['idx', 'question', 'passage', 'label']]
-        with jsonlines.open(file_path,"r") as f:
+        with jsonlines.open(input_file,"r") as f:
             for line in f.iter():
                 row = [line['idx'],line['question'],line['passage'],line['label']]
                 all_lines.append(row)
